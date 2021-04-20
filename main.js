@@ -1,17 +1,20 @@
-/* creo le mie referenze */
-var menu = $(".header-right")
-
-/* effetto hover sul menu che scompare al passaggio del mouse */
-menu.mouseenter(function(){
-    menu.hide();
-})
-
-/* quando tolgo il mouse il menu deve ruiapparire */
-menu.mouseleave(reset);
 
 
+/* clicco e aggiungo la classe avtive all hamburger menus */
+$(function(){
+    $('.header-right > a').click(function(){
+        $('.hamburger-menu').addClass('active');
+    });
 
-/* funzione che fa riapparire il menu quando tolgo il mouse */
-function reset(){
-    menu.show();
-}
+    /* clicco su close  */
+    $('.close').click(function(){
+        /* tolgo la classe active dall'hamburger menu */
+        $('.hamburger-menu').removeClass('active');
+    });
+});
+
+
+
+
+
+
